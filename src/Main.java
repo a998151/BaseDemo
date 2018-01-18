@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println(VALUE_ONE);
-        System.out.println("Hi~~");
+        
 
     }
 }
