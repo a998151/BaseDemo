@@ -17,17 +17,22 @@ public class LoggingException extends Exception {
 }
 class LoggingExceptions{
     public static void main(String[] args){
+        int a=0,b=0;
         try {
+            a=1;
             throw new LoggingException();
         } catch (LoggingException e) {
             System.err.print("Caught "+e);
         }finally {
             System.out.println("get me ");
         }
+        System.out.println("此处得到了执行----"+a);
+
         try {
-            throw new LoggingException();
-        }catch (LoggingException e){
+            throw new RuntimeException();
+        }catch (RuntimeException e){
             System.err.print("Caught "+e);
         }
+        System.out.println("此处得到了执行----"+b);
     }
 }
